@@ -1,0 +1,6 @@
+<img
+          style="height: 300px; position: absolute; top: 130px; left: 150px"
+          src="images\ComputerIcon.jpg"
+        />
+
+class="main" id="Education"

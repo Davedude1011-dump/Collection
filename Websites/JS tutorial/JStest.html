@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS tutorial</title>
+    <script>
+      function myFunction() {
+        document.getElementById("paraTest").innerHTML =
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
+      }
+    </script>
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick="document.getElementById('Name').innerHTML = 'Thomas'"
+    >
+      Whats your Name?
+    </button>
+    <p id="Name"></p>
+    <button
+      type="button"
+      onclick="document.getElementById('Name').innerHTML='Yes'"
+    >
+      You Sure?
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Name').innerHTML=1+2"
+    >
+      Whats 1 + 2?
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Bulb').src='images/pic_bulbon.gif'"
+    >
+      Bulb on
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Bulb').src='images/pic_bulboff.gif'"
+    >
+      Bulb off
+    </button>
+    <img id="Bulb" src="images\pic_bulboff.gif" style="height: 150px" />
+    <button
+      type="button"
+      onclick="document.getElementById('Bulb').style.height='500px', document.getElementById('Name').style.fontSize='35px'"
+    >
+      ZOOM IN
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Bulb').style.height='70px', document.getElementById('Name').style.fontSize='5px'"
+    >
+      ZOOM OUT
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Bulb').style.height='150px', document.getElementById('Bulb').src='images/pic_bulboff.gif'"
+    >
+      RESET IMG
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('Name').style.fontSize='15px', document.getElementById('Name').innerHTML=''"
+    >
+      RESET TXT
+    </button>
+
+    <p id="InvisTxt">Poof!</p>
+    <button
+      type="button"
+      onclick="document.getElementById('InvisTxt').style.display='none'"
+    >
+      Be Gone Text
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('InvisTxt').style.display='block'"
+    >
+      Now Come Back
+    </button>
+    <p id="paraTest" style="width: 60%">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+    <button type="button" onclick="myFunction()">diffrent Paragraph</button>
+    <p id="Var1"></p>
+    <p id="Var2"></p>
+    <p id="Var3"></p>
+    <script>
+      document.getElementById("Var1").innerHTML = "Thomas";
+      document.getElementById("Var2").innerHTML = "Bob";
+      document.getElementById("Var3").innerHTML = 10.5;
+    </script>
+    <p id="changeTitle">Type Text In The Box Then Submit</p>
+    <input type="text" id="inputText" />
+
+    <script>
+      function changeTitleFunction() {
+        var newTitle = document.getElementById("inputText").value;
+        document.getElementById("changeTitle").innerHTML = newTitle;
+      }
+    </script>
+    <button
+      id="disapearButton"
+      type="button"
+      onclick="changeTitleFunction(), document.getElementById('disapearButton').style.display='none',
+       document.getElementById('inputText').style.display='none'"
+    >
+      Submit
+    </button>
+    <div
+      style="
+        position: absolute;
+        border: 5px solid black;
+        width: 90%;
+        height: 800px;
+        top: 560px;
+      "
+    >
+      <div style="position: absolute; left: 20px">
+        <h1 id="changeBorderTitle">Title</h1>
+        <input type="text" id="borderInputText" />
+        <script>
+          function changeBorderTitleFunction() {
+            var newBorderTitle =
+              document.getElementById("borderInputText").value;
+            document.getElementById("changeBorderTitle").innerHTML =
+              newBorderTitle;
+          }
+        </script>
+        <button
+          id="titleButton"
+          type="button"
+          onclick="changeBorderTitleFunction(), document.getElementById('titleButton').style.display='none',
+       document.getElementById('borderInputText').style.display='none'"
+        >
+          Submit
+        </button>
+        <p id="changeBorderText">Paragraph</p>
+        <textarea id="borderInputTextP" cold="30" rows="10"></textarea>
+        <script>
+          function changeBorderTextFunction() {
+            var newBorderText =
+              document.getElementById("borderInputTextP").value;
+            document.getElementById("changeBorderText").innerHTML =
+              newBorderText;
+          }
+        </script>
+        <button
+          id="textButton"
+          type="button"
+          onclick="changeBorderTextFunction(), document.getElementById('textButton').style.display='none',
+       document.getElementById('borderInputTextP').style.display='none'"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
